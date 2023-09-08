@@ -124,7 +124,7 @@ class _ChatState extends State<Chat> {
         });
         chat.add(
           ChatBubble(
-            text: "This should be a response from ChatGPT.",
+            text: "This should be a response from CarbonGPT.",
             type: ChatBubbleType.chatBubbleAvatarOnLeft,
             hasQuickQuestions: true,
             onQuickQuestionTap: _sendMessage,
