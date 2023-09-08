@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:carbonsense/components/custom_app_bar.dart';
 import 'package:carbonsense/main.dart';
 import 'package:carbonsense/models/carbon_footprint.dart';
@@ -39,24 +41,24 @@ class Homepage extends StatelessWidget {
               children: [Expanded(child: Container())],
             ),
             const Padding(
-              padding: EdgeInsets.all(32),
+              padding: EdgeInsets.all(30),
               child: Expanded(
                 child: Icon(
                   FontAwesomeIcons.earthEurope,
                   color: kDarkGreen,
-                  size: 100,
+                  size: 105,
                 ),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(5),
               child: Column(
                 children: [
                   Text(
                     "The result of calculating your carbon footprint is:",
                     textAlign: TextAlign.center,
                     style: GoogleFonts.montserrat(
-                      fontSize: 16,
+                      fontSize: 17,
                     ),
                   ),
                   Text(
@@ -140,8 +142,65 @@ class Homepage extends StatelessWidget {
                           builder: (context) {
                             return Container(
                               child: AlertDialog(
-                                title:
-                                    Text("Tips to reduce your CO2 emissions:"),
+                                title: Column(
+                                  children: [
+                                    Text(
+                                      "Tips to reduce your CO2 emissions:",
+                                      style: GoogleFonts.aBeeZee(
+                                        fontWeight: FontWeight.w100,
+                                        color: kDarkGreen,
+                                      ),
+                                    ),
+                                    SizedBox(height: 30),
+                                    Text(
+                                      "► Use public transports.",
+                                      style: GoogleFonts.aBeeZee(
+                                        fontWeight: FontWeight.w100,
+                                        color: kDarkGreen,
+                                      ),
+                                    ),
+                                    SizedBox(height: 10),
+                                    Text(
+                                      "► Use renewable energy sources.",
+                                      style: GoogleFonts.aBeeZee(
+                                        fontWeight: FontWeight.w100,
+                                        color: kDarkGreen,
+                                      ),
+                                    ),
+                                    SizedBox(height: 10),
+                                    Text(
+                                      "► Reduce, reuse, recycle.",
+                                      style: GoogleFonts.aBeeZee(
+                                        fontWeight: FontWeight.w100,
+                                        color: kDarkGreen,
+                                      ),
+                                    ),
+                                    SizedBox(height: 10),
+                                    Text(
+                                      "► Plant and maintain trees.",
+                                      style: GoogleFonts.aBeeZee(
+                                        fontWeight: FontWeight.w100,
+                                        color: kDarkGreen,
+                                      ),
+                                    ),
+                                    SizedBox(height: 10),
+                                    // Text(
+                                    //   "► Use your car less",
+                                    //   style: GoogleFonts.aBeeZee(
+                                    //     fontWeight: FontWeight.w100,
+                                    //     color: kDarkGreen,
+                                    //   ),
+                                    // ),
+                                    SizedBox(height: 10),
+                                    Text(
+                                      "► Go for renewable energy.",
+                                      style: GoogleFonts.aBeeZee(
+                                        fontWeight: FontWeight.w100,
+                                        color: kDarkGreen,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             );
                           });
