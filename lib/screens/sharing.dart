@@ -100,7 +100,7 @@ class _PopupState extends State<_Popup> {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             Text(
-              'Electric bicycle!',
+              'Mumbai',
               overflow: TextOverflow.fade,
               softWrap: false,
               style: GoogleFonts.montserrat(
@@ -111,7 +111,7 @@ class _PopupState extends State<_Popup> {
             ),
             const Padding(padding: EdgeInsets.symmetric(vertical: 4.0)),
             Text(
-              scooter.available ? "Available" : "Not Available",
+              scooter.available ? "Current AQI: 56" : "none",
               style: GoogleFonts.montserrat(
                 fontSize: 12,
                 color: scooter.available ? kDarkGreen : kRed,

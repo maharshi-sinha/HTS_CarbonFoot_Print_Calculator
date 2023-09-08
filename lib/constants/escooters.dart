@@ -4,8 +4,8 @@ List<Map<String, dynamic>> _json = [
   {
     "companyName": "Electric Vehicle Charging",
     "pricePerKm": 0.15,
-    "latitude": 21.213780,
-    "longitude": 81.344760,
+    "latitude": 19.076090,
+    "longitude": 72.877426,
     "available": true
   },
   {

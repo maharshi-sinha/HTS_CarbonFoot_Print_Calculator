@@ -44,12 +44,12 @@ class Homepage extends StatelessWidget {
                 child: Icon(
                   FontAwesomeIcons.earthEurope,
                   color: kDarkGreen,
-                  size: 200,
+                  size: 100,
                 ),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(32),
+              padding: const EdgeInsets.all(10),
               child: Column(
                 children: [
                   Text(
@@ -127,6 +127,31 @@ class Homepage extends StatelessWidget {
                     ),
                     child: Text(
                       "Recalculate",
+                      style: GoogleFonts.montserrat(
+                        fontWeight: FontWeight.bold,
+                        color: kDarkGreen,
+                      ),
+                    ),
+                  ),
+                  MaterialButton(
+                    onPressed: () {
+                      showDialog(
+                          context: context,
+                          builder: (context) {
+                            return Container(
+                              child: AlertDialog(
+                                title:
+                                    Text("Tips to reduce your CO2 emissions:"),
+                              ),
+                            );
+                          });
+                    },
+                    color: kLightGreen4,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Text(
+                      "Remove your CO2 emissions",
                       style: GoogleFonts.montserrat(
                         fontWeight: FontWeight.bold,
                         color: kDarkGreen,
