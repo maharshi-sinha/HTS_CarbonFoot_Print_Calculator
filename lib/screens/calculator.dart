@@ -6,16 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-/*
-  DMOANDE
-  
-  Quanti chilometri guidi o utilizzi i mezzi pubblici in media ogni giorno?
-  Qual è il consumo medio giornaliero di elettricità nella tua abitazione (in kilowatt-ora)?
-  Quanto tempo trascorri utilizzando dispositivi elettronici (computer, smartphone, tablet) ogni giorno?
-  Quali tipi di cibo consumi abitualmente? (In particolare, carne, latticini, cibo confezionato, ecc.)
-  Hai un sistema di riscaldamento o raffreddamento nella tua abitazione? Se sì, a quale frequenza lo utilizzi?
-  Quante ore trascorri in aereo ogni anno (calcola una media giornaliera)?
-   */
 
 class Calculator extends StatefulWidget {
   final bool back;

@@ -18,7 +18,8 @@ class Sharing extends StatelessWidget {
       appBar: CustomAppBar(),
       body: FlutterMap(
         options: MapOptions(
-          center: LatLng(40.768901, 14.778345),
+          // center: LatLng(40.768901, 14.778345),
+          center: LatLng(21.213780, 81.344760),
           zoom: 14.5,
         ),
         children: [
@@ -99,7 +100,7 @@ class _PopupState extends State<_Popup> {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             Text(
-              'Bicicletta elettrica!',
+              'Electric bicycle!',
               overflow: TextOverflow.fade,
               softWrap: false,
               style: GoogleFonts.montserrat(
@@ -110,7 +111,7 @@ class _PopupState extends State<_Popup> {
             ),
             const Padding(padding: EdgeInsets.symmetric(vertical: 4.0)),
             Text(
-              scooter.available ? "Disponibile" : "Non disponibile",
+              scooter.available ? "Available" : "Not Available",
               style: GoogleFonts.montserrat(
                 fontSize: 12,
                 color: scooter.available ? kDarkGreen : kRed,
