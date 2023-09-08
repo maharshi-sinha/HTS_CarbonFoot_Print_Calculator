@@ -21,49 +21,209 @@ class _FunFactState extends State<FunFact> {
     return Scaffold(
       appBar: const CustomAppBar(),
       body: Center(
-        child: Container(
-          padding: const EdgeInsets.all(16),
-          margin: const EdgeInsets.symmetric(
-            horizontal: 32,
-          ),
-          decoration: BoxDecoration(
-            color: kLightGreen4,
-            borderRadius: BorderRadius.circular(16),
-          ),
+        child: SingleChildScrollView(
           child: Column(
-            mainAxisSize: MainAxisSize.min,
             children: [
-              InkWell(
-                onTap: () => setState(() {}),
-                child: Transform.rotate(
-                  angle: math.pi / 4,
-                  child: const Icon(
-                    Icons.push_pin_rounded,
-                    color: kDarkGreen,
-                    size: 35,
-                  ),
+              Container(
+                padding: const EdgeInsets.all(16),
+                margin: const EdgeInsets.symmetric(
+                  horizontal: 32,
+                ),
+                decoration: BoxDecoration(
+                  color: kLightGreen4,
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    InkWell(
+                      onTap: () => setState(() {}),
+                      child: Transform.rotate(
+                        angle: math.pi / 4,
+                        child: const Icon(
+                          Icons.push_pin_rounded,
+                          color: kDarkGreen,
+                          size: 35,
+                        ),
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 8),
+                    ),
+                    Text(
+                      "FUN FACT",
+                      style: GoogleFonts.montserrat(
+                        fontWeight: FontWeight.bold,
+                        color: kDarkGreen,
+                        fontSize: 26,
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 16),
+                    ),
+                    Text(
+                      kFunFacts.random(),
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.montserrat(
+                        color: kDarkGreen,
+                        fontSize: 26,
+                      ),
+                      
+                    ),
+                    ElevatedButton(onPressed: (){
+
+                    }, child: Text("Hello"))
+                  ],
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.only(top: 8),
-              ),
-              Text(
-                "FUN FACT",
-                style: GoogleFonts.montserrat(
-                  fontWeight: FontWeight.bold,
-                  color: kDarkGreen,
-                  fontSize: 26,
+              SizedBox(height: 10,),
+              Container(
+                padding: const EdgeInsets.all(16),
+                margin: const EdgeInsets.symmetric(
+                  horizontal: 32,
+                ),
+                decoration: BoxDecoration(
+                  color: kLightGreen4,
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    InkWell(
+                      onTap: () => setState(() {}),
+                      child: Transform.rotate(
+                        angle: math.pi / 4,
+                        child: const Icon(
+                          Icons.push_pin_rounded,
+                          color: kDarkGreen,
+                          size: 35,
+                        ),
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 8),
+                    ),
+                    Text(
+                      "FUN FACT",
+                      style: GoogleFonts.montserrat(
+                        fontWeight: FontWeight.bold,
+                        color: kDarkGreen,
+                        fontSize: 26,
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 16),
+                    ),
+                    Text(
+                      kFunFacts.random(),
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.montserrat(
+                        color: kDarkGreen,
+                        fontSize: 26,
+                      ),
+                    ),
+                    
+                  ],
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.only(top: 16),
+              SizedBox(height: 10,),
+              Container(
+                padding: const EdgeInsets.all(16),
+                margin: const EdgeInsets.symmetric(
+                  horizontal: 32,
+                ),
+                decoration: BoxDecoration(
+                  color: kLightGreen4,
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    InkWell(
+                      onTap: () => setState(() {}),
+                      child: Transform.rotate(
+                        angle: math.pi / 4,
+                        child: const Icon(
+                          Icons.push_pin_rounded,
+                          color: kDarkGreen,
+                          size: 35,
+                        ),
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 8),
+                    ),
+                    Text(
+                      "FUN FACT",
+                      style: GoogleFonts.montserrat(
+                        fontWeight: FontWeight.bold,
+                        color: kDarkGreen,
+                        fontSize: 26,
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 16),
+                    ),
+                    Text(
+                      kFunFacts.random(),
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.montserrat(
+                        color: kDarkGreen,
+                        fontSize: 26,
+                      ),
+                    ),
+                    
+                  ],
+                ),
               ),
-              Text(
-                kFunFacts.random(),
-                textAlign: TextAlign.center,
-                style: GoogleFonts.montserrat(
-                  color: kDarkGreen,
-                  fontSize: 26,
+              SizedBox(height: 10,),
+              Container(
+                padding: const EdgeInsets.all(16),
+                margin: const EdgeInsets.symmetric(
+                  horizontal: 32,
+                ),
+                decoration: BoxDecoration(
+                  color: kLightGreen4,
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    InkWell(
+                      onTap: () => setState(() {}),
+                      child: Transform.rotate(
+                        angle: math.pi / 4,
+                        child: const Icon(
+                          Icons.push_pin_rounded,
+                          color: kDarkGreen,
+                          size: 35,
+                        ),
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 8),
+                    ),
+                    Text(
+                      "FUN FACT",
+                      style: GoogleFonts.montserrat(
+                        fontWeight: FontWeight.bold,
+                        color: kDarkGreen,
+                        fontSize: 26,
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 16),
+                    ),
+                    Text(
+                      kFunFacts.random(),
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.montserrat(
+                        color: kDarkGreen,
+                        fontSize: 26,
+                      ),
+                    ),
+                    
+                  ],
                 ),
               ),
             ],
