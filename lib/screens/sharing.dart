@@ -17,7 +17,7 @@ class Sharing extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(),
+      appBar: const CustomAppBar(),
       body: FlutterMap(
         options: MapOptions(
           // center: LatLng(40.768901, 14.778345),
@@ -42,6 +42,7 @@ class Sharing extends StatelessWidget {
                         point: LatLng(e.latitude, e.longitude),
                         builder: (context) => const Icon(
                           Icons.location_pin,
+                          size: 45,
                           color: kDarkGreen,
                         ),
                       ),
@@ -81,7 +82,7 @@ class _PopupState extends State<_Popup> {
           Padding(
             padding: const EdgeInsets.only(left: 20, right: 10),
             child: Icon(
-              FontAwesomeIcons.bicycle,
+              FontAwesomeIcons.cloud,
               color: scooter.available ? kDarkGreen : kRed,
             ),
           ),

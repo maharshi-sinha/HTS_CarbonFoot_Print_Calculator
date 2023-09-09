@@ -3,6 +3,8 @@ import 'package:carbonsense/constants/fun_facts.dart';
 import 'package:carbonsense/extensions/random_item_list.dart';
 import 'package:carbonsense/theme/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:http/http.dart' as http;
 
 import 'dart:math' as math;
 
@@ -19,11 +21,26 @@ class _FunFactState extends State<FunFact> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(),
+      // appBar: const CustomAppBar(),
+      appBar: AppBar(
+        title: Text(
+          "Challenges and Quizzes",
+          style: GoogleFonts.montserrat(
+            fontWeight: FontWeight.bold,
+            color: kDarkGreen,
+            fontSize: 26,
+          ),
+        ),
+        centerTitle: true,
+      ),
       body: Center(
         child: SingleChildScrollView(
           child: Column(
             children: [
+              // Text(
+              //   "Challenges and Quizzes",
+              //   style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
+              // ),
               Container(
                 padding: const EdgeInsets.all(16),
                 margin: const EdgeInsets.symmetric(
@@ -40,18 +57,18 @@ class _FunFactState extends State<FunFact> {
                       onTap: () => setState(() {}),
                       child: Transform.rotate(
                         angle: math.pi / 4,
-                        child: const Icon(
-                          Icons.push_pin_rounded,
-                          color: kDarkGreen,
-                          size: 35,
-                        ),
+                        // child: const Icon(
+                        //   Icons.push_pin_rounded,
+                        //   color: kDarkGreen,
+                        //   size: 35,
+                        // ),
                       ),
                     ),
                     const Padding(
                       padding: EdgeInsets.only(top: 8),
                     ),
                     Text(
-                      "FUN FACT",
+                      "Challenge No. 1",
                       style: GoogleFonts.montserrat(
                         fontWeight: FontWeight.bold,
                         color: kDarkGreen,
@@ -68,15 +85,19 @@ class _FunFactState extends State<FunFact> {
                         color: kDarkGreen,
                         fontSize: 26,
                       ),
-                      
                     ),
-                    ElevatedButton(onPressed: (){
-
-                    }, child: Text("Hello"))
+                    ElevatedButton(
+                        onPressed: () {
+                          final url = Uri.parse('https://www.conservation.org/quizzes/carbon-footprint-quiz');
+                          _launchUrl(url);
+                        },
+                        child: Text("Participate Now"))
                   ],
                 ),
               ),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               Container(
                 padding: const EdgeInsets.all(16),
                 margin: const EdgeInsets.symmetric(
@@ -104,7 +125,7 @@ class _FunFactState extends State<FunFact> {
                       padding: EdgeInsets.only(top: 8),
                     ),
                     Text(
-                      "FUN FACT",
+                      "Challenge No. 2",
                       style: GoogleFonts.montserrat(
                         fontWeight: FontWeight.bold,
                         color: kDarkGreen,
@@ -122,11 +143,18 @@ class _FunFactState extends State<FunFact> {
                         fontSize: 26,
                       ),
                     ),
-                    
+                    ElevatedButton(
+                        onPressed: () {
+                          final url = Uri.parse('https://www.conservation.org/quizzes/carbon-footprint-quiz');
+                          _launchUrl(url);
+                        },
+                        child: Text("Participate Now"))
                   ],
                 ),
               ),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               Container(
                 padding: const EdgeInsets.all(16),
                 margin: const EdgeInsets.symmetric(
@@ -154,7 +182,7 @@ class _FunFactState extends State<FunFact> {
                       padding: EdgeInsets.only(top: 8),
                     ),
                     Text(
-                      "FUN FACT",
+                      "Challenge No. 3",
                       style: GoogleFonts.montserrat(
                         fontWeight: FontWeight.bold,
                         color: kDarkGreen,
@@ -172,11 +200,18 @@ class _FunFactState extends State<FunFact> {
                         fontSize: 26,
                       ),
                     ),
-                    
+                    ElevatedButton(
+                        onPressed: () {
+                          final url = Uri.parse('https://www.conservation.org/quizzes/carbon-footprint-quiz');
+                          _launchUrl(url);
+                        },
+                        child: Text("Participate Now"))
                   ],
                 ),
               ),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               Container(
                 padding: const EdgeInsets.all(16),
                 margin: const EdgeInsets.symmetric(
@@ -204,7 +239,7 @@ class _FunFactState extends State<FunFact> {
                       padding: EdgeInsets.only(top: 8),
                     ),
                     Text(
-                      "FUN FACT",
+                      "Challenge No. 4",
                       style: GoogleFonts.montserrat(
                         fontWeight: FontWeight.bold,
                         color: kDarkGreen,
@@ -222,7 +257,12 @@ class _FunFactState extends State<FunFact> {
                         fontSize: 26,
                       ),
                     ),
-                    
+                    ElevatedButton(
+                        onPressed: () {
+                          final url = Uri.parse('https://www.conservation.org/quizzes/carbon-footprint-quiz');
+                          _launchUrl(url);
+                        },
+                        child: Text("Participate Now"))
                   ],
                 ),
               ),
@@ -231,5 +271,11 @@ class _FunFactState extends State<FunFact> {
         ),
       ),
     );
+  }
+}
+
+Future<void> _launchUrl(_url) async {
+  if (!await launchUrl(_url)) {
+    throw Exception('Could not launch $_url');
   }
 }
