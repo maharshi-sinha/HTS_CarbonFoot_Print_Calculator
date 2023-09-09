@@ -3,6 +3,8 @@ import 'package:carbonsense/constants/fun_facts.dart';
 import 'package:carbonsense/extensions/random_item_list.dart';
 import 'package:carbonsense/theme/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:http/http.dart' as http;
 
 import 'dart:math' as math;
 
@@ -19,51 +21,249 @@ class _FunFactState extends State<FunFact> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(),
+      // appBar: const CustomAppBar(),
+      appBar: AppBar(
+        title: Text(
+          "Challenges and Quizzes",
+          style: GoogleFonts.montserrat(
+            fontWeight: FontWeight.bold,
+            color: kDarkGreen,
+            fontSize: 26,
+          ),
+        ),
+        centerTitle: true,
+      ),
       body: Center(
-        child: Container(
-          padding: const EdgeInsets.all(16),
-          margin: const EdgeInsets.symmetric(
-            horizontal: 32,
-          ),
-          decoration: BoxDecoration(
-            color: kLightGreen4,
-            borderRadius: BorderRadius.circular(16),
-          ),
+        child: SingleChildScrollView(
           child: Column(
-            mainAxisSize: MainAxisSize.min,
             children: [
-              InkWell(
-                onTap: () => setState(() {}),
-                child: Transform.rotate(
-                  angle: math.pi / 4,
-                  child: const Icon(
-                    Icons.push_pin_rounded,
-                    color: kDarkGreen,
-                    size: 35,
-                  ),
+              // Text(
+              //   "Challenges and Quizzes",
+              //   style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
+              // ),
+              Container(
+                padding: const EdgeInsets.all(16),
+                margin: const EdgeInsets.symmetric(
+                  horizontal: 32,
+                ),
+                decoration: BoxDecoration(
+                  color: kLightGreen4,
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    InkWell(
+                      onTap: () => setState(() {}),
+                      child: Transform.rotate(
+                        angle: math.pi / 4,
+                        // child: const Icon(
+                        //   Icons.push_pin_rounded,
+                        //   color: kDarkGreen,
+                        //   size: 35,
+                        // ),
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 8),
+                    ),
+                    Text(
+                      "Challenge No. 1",
+                      style: GoogleFonts.montserrat(
+                        fontWeight: FontWeight.bold,
+                        color: kDarkGreen,
+                        fontSize: 26,
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 16),
+                    ),
+                    Text(
+                      kFunFacts.random(),
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.montserrat(
+                        color: kDarkGreen,
+                        fontSize: 26,
+                      ),
+                    ),
+                    ElevatedButton(
+                        onPressed: () {
+                          final url = Uri.parse('https://www.conservation.org/quizzes/carbon-footprint-quiz');
+                          _launchUrl(url);
+                        },
+                        child: Text("Participate Now"))
+                  ],
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.only(top: 8),
+              SizedBox(
+                height: 10,
               ),
-              Text(
-                "FUN FACT",
-                style: GoogleFonts.montserrat(
-                  fontWeight: FontWeight.bold,
-                  color: kDarkGreen,
-                  fontSize: 26,
+              Container(
+                padding: const EdgeInsets.all(16),
+                margin: const EdgeInsets.symmetric(
+                  horizontal: 32,
+                ),
+                decoration: BoxDecoration(
+                  color: kLightGreen4,
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    InkWell(
+                      onTap: () => setState(() {}),
+                      child: Transform.rotate(
+                        angle: math.pi / 4,
+                        child: const Icon(
+                          Icons.push_pin_rounded,
+                          color: kDarkGreen,
+                          size: 35,
+                        ),
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 8),
+                    ),
+                    Text(
+                      "Challenge No. 2",
+                      style: GoogleFonts.montserrat(
+                        fontWeight: FontWeight.bold,
+                        color: kDarkGreen,
+                        fontSize: 26,
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 16),
+                    ),
+                    Text(
+                      kFunFacts.random(),
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.montserrat(
+                        color: kDarkGreen,
+                        fontSize: 26,
+                      ),
+                    ),
+                    ElevatedButton(
+                        onPressed: () {
+                          final url = Uri.parse('https://www.conservation.org/quizzes/carbon-footprint-quiz');
+                          _launchUrl(url);
+                        },
+                        child: Text("Participate Now"))
+                  ],
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.only(top: 16),
+              SizedBox(
+                height: 10,
               ),
-              Text(
-                kFunFacts.random(),
-                textAlign: TextAlign.center,
-                style: GoogleFonts.montserrat(
-                  color: kDarkGreen,
-                  fontSize: 26,
+              Container(
+                padding: const EdgeInsets.all(16),
+                margin: const EdgeInsets.symmetric(
+                  horizontal: 32,
+                ),
+                decoration: BoxDecoration(
+                  color: kLightGreen4,
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    InkWell(
+                      onTap: () => setState(() {}),
+                      child: Transform.rotate(
+                        angle: math.pi / 4,
+                        child: const Icon(
+                          Icons.push_pin_rounded,
+                          color: kDarkGreen,
+                          size: 35,
+                        ),
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 8),
+                    ),
+                    Text(
+                      "Challenge No. 3",
+                      style: GoogleFonts.montserrat(
+                        fontWeight: FontWeight.bold,
+                        color: kDarkGreen,
+                        fontSize: 26,
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 16),
+                    ),
+                    Text(
+                      kFunFacts.random(),
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.montserrat(
+                        color: kDarkGreen,
+                        fontSize: 26,
+                      ),
+                    ),
+                    ElevatedButton(
+                        onPressed: () {
+                          final url = Uri.parse('https://www.conservation.org/quizzes/carbon-footprint-quiz');
+                          _launchUrl(url);
+                        },
+                        child: Text("Participate Now"))
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                padding: const EdgeInsets.all(16),
+                margin: const EdgeInsets.symmetric(
+                  horizontal: 32,
+                ),
+                decoration: BoxDecoration(
+                  color: kLightGreen4,
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    InkWell(
+                      onTap: () => setState(() {}),
+                      child: Transform.rotate(
+                        angle: math.pi / 4,
+                        child: const Icon(
+                          Icons.push_pin_rounded,
+                          color: kDarkGreen,
+                          size: 35,
+                        ),
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 8),
+                    ),
+                    Text(
+                      "Challenge No. 4",
+                      style: GoogleFonts.montserrat(
+                        fontWeight: FontWeight.bold,
+                        color: kDarkGreen,
+                        fontSize: 26,
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 16),
+                    ),
+                    Text(
+                      kFunFacts.random(),
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.montserrat(
+                        color: kDarkGreen,
+                        fontSize: 26,
+                      ),
+                    ),
+                    ElevatedButton(
+                        onPressed: () {
+                          final url = Uri.parse('https://www.conservation.org/quizzes/carbon-footprint-quiz');
+                          _launchUrl(url);
+                        },
+                        child: Text("Participate Now"))
+                  ],
                 ),
               ),
             ],
@@ -71,5 +271,11 @@ class _FunFactState extends State<FunFact> {
         ),
       ),
     );
+  }
+}
+
+Future<void> _launchUrl(_url) async {
+  if (!await launchUrl(_url)) {
+    throw Exception('Could not launch $_url');
   }
 }

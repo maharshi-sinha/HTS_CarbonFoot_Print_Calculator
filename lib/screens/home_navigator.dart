@@ -100,7 +100,7 @@ class BottomNavBarState extends State<BottomNavBar> {
         ),
         BottomNavigationBarItem(
           icon: Icon(FontAwesomeIcons.book),
-          label: "Fun Fact",
+          label: "Challenges",
         ),
         BottomNavigationBarItem(
           icon: Icon(FontAwesomeIcons.house),
