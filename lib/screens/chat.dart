@@ -24,7 +24,7 @@ class _ChatState extends State<Chat> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar(
-        title: "CarbonB8",
+        title: "EcoEmissions",
       ),
       body: Column(
         children: [
