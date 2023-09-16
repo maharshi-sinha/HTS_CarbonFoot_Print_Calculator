@@ -2,7 +2,7 @@
 
 > Postman API Track Winners 🥇
 
-CarbonTracker is a Flutter mobile application designed to help users track their daily carbon emissions, understand the environmental impact of their activities, and take steps towards a more sustainable lifestyle. The app provides a range of features to educate and motivate users, including real-time air quality data, pollution-related challenges, quizzes, and integration with external APIs for a comprehensive user experience.
+EcoEmission is a Flutter mobile application designed to help users track their daily carbon emissions, understand the environmental impact of their activities, and take steps towards a more sustainable lifestyle. The app provides a range of features to educate and motivate users, including real-time air quality data, pollution-related challenges, quizzes, and integration with external APIs for a comprehensive user experience.
 
 
 ## Features
